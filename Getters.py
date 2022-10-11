@@ -114,6 +114,10 @@ def getFood(prompt, debug = False):
     if debug: print("getFood Function")
     
     goodInput = False
+    f = open("foods.txt", 'r')
+    foods = f.read().splitlines()
+    f.close()
+    # ~ if debug: print(foods)
     
     while not goodInput:
         word = input(prompt)
@@ -121,7 +125,9 @@ def getFood(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
-        
+        elif word.lower() not in foods:
+            goodInput = False
+            print("Sorry I don't know that one.")
         
     return word
     
