@@ -55,6 +55,20 @@ def getWord(prompt, debug = False):
         
     return word
     
+def getWeapon(prompt, debug = False):
+    if debug: print("getWeapon Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word):
+            goodInput = False
+            print("Don't use that foul language")
+        
+    return word
+    
 def getSport(prompt, debug = False):
     if debug: print("getSport Function")
     
@@ -109,6 +123,27 @@ def getfastFood(prompt, debug = False):
         elif word.lower() not in fastFood:
             goodInput = False
             print("please use a real fast food place")
+        
+    return word
+
+def getFood(prompt, debug = False):
+    if debug: print("getFood Function")
+    
+    goodInput = False
+    f = open("foods.txt", 'r')
+    foods = f.read().splitlines()
+    f.close()
+    # ~ if debug: print(foods)
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        elif word.lower() not in foods:
+            goodInput = False
+            print("Sorry I don't know that one.")
         
     return word
     
@@ -259,16 +294,17 @@ def getMoney(prompt, debug = False):
     
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
-    if word.lower() in swearList:
+   
+
+	txt_file = open("SwearList.txt", "r")
+	file_content = txt_file.read()
+
+	content_list = file_content.split(",")
+	txt_file.close()
+
+	swearList = [content_list]
+
+	if word.lower() in swearList:
         return True
     else:
         return False
-   
-
-txt_file = open("SwearList.txt", "r")
-file_content = txt_file.read()
-
-content_list = file_content.split(",")
-txt_file.close()
-
-swearList = [content_list]
