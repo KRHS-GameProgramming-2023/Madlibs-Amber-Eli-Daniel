@@ -14,7 +14,7 @@ def Story3(debug = False):
     out = "\n"
     out += "    One day me and my friend " + friendName3
     out += " were out " + sport3
-    out += "\n Out of no where huge " + thing3
+    out += ";\n Out of no where huge " + thing3
     out += " fell out of the sky! \n"
     out += " so " + friendName3
     out += " pulled out a " + weapon3
@@ -28,3 +28,5 @@ def Story3(debug = False):
     
     
     return out
+    
+    
