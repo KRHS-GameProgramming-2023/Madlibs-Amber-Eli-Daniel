@@ -21,6 +21,13 @@ def getMenuOption(debug = False):
                 option = "1"
                 goodInput = True
                 
+        elif (option == "3" or
+            option == "three" or 
+            option == "story 3" or
+            option == "story3"):
+                option = "3"
+                goodInput = True
+                
         else:
             print("Please make a valid choice")
         
@@ -30,7 +37,7 @@ def getMenuOption(debug = False):
 def getWord(prompt, debug = False):
     if debug: print("getWord Function")
     
-    goodInput = False
+    goodInput = False 
     
     while not goodInput:
         word = input(prompt)
@@ -38,6 +45,20 @@ def getWord(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        
+    return word
+    
+def getWeapon(prompt, debug = False):
+    if debug: print("getWeapon Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word):
+            goodInput = False
+            print("Don't use that foul language")
         
     return word
     
