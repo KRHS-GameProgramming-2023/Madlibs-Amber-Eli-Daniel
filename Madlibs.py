@@ -31,6 +31,10 @@ def Madlibs(debug = False):
             print(Story3())
             print("\n")
             input("Press enter to continue")
+        if choice == "easter":
+            print(EasterEggScreen())
+            print("\n")
+            input("Press enter to continue")
         
 
 Madlibs(False)

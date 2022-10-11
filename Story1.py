@@ -11,7 +11,7 @@ def Story1(debug = False):
     friendName2 = getWord("Enter a name: ", debug)
     cardGame1 = getGame("Enter a card game: ", debug)
     noun1 = getNoun("Enter a noun: ", debug)
-    verb1 = getVerb("Enter a past tense verb: ", debug)
+    verb1 = getPastVerb("Enter a past tense verb: ", debug)
 
     out = "\n"
     out += "One day me and my friend " + friendName1
