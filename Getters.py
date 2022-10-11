@@ -294,17 +294,11 @@ def getMoney(prompt, debug = False):
     
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
-   
+    f = open("swearList.txt", 'r')
+    swearList = f.read().splitlines()
+    f.close()
 
-	txt_file = open("SwearList.txt", "r")
-	file_content = txt_file.read()
-
-	content_list = file_content.split(",")
-	txt_file.close()
-
-	swearList = [content_list]
-
-	if word.lower() in swearList:
+    if word.lower() in swearList:
         return True
     else:
         return False
