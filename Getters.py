@@ -34,6 +34,15 @@ def getMenuOption(debug = False):
             option == "story3"):
                 option = "3"
                 goodInput = True
+        elif (option == "4" or 
+            option == "four" or
+            option == "story 4" or 
+            option == "story4"):
+                option = "4"
+                goodInput = True
+        elif (option == "spike" or "quack"):
+            option = "easter"
+            goodInput = True
                 
         else:
             print("Please make a valid choice")
@@ -214,7 +223,7 @@ def getNoun(prompt, debug = False):
         
     return word
 
-def getVerb(prompt, debug = False):
+def getPastVerb(prompt, debug = False):
     if debug: print("getVerb Function")
     
     goodInput = False
