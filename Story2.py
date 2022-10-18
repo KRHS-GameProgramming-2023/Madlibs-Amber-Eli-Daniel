@@ -20,5 +20,7 @@ def Story2(debug = False):
     out+= "When we finished playing, I wanted to eat at " + food1 + ".\n"
     out+= "My dad " +name1+ " drove us there and gave me $" + money1 + ".\n"
     out+= "" + getWord  + "got " + foodOption1 +" " + drinkOption1 + " while I got\n"
-    out+= "" +foodoption2 + " " +drinkOption2 +"."
+    out+= "" + foodoption2 + " " + drinkOption2 + ".\n"
+    out+= "Once we dropped off " + getWord + "I went home and took a nap.\n"
+    out+= "THE END"
     return out
