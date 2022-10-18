@@ -259,6 +259,66 @@ def getName1(prompt, debug = False):
             
         
     return word
+    
+def getFoodOption1(prompt, debug = False):
+    if debug: print("getFoodOption1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+
+def getFoodOption2(prompt, debug = False):
+    if debug: print("getFoodOption2 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+    
+def getDrinkOption1(prompt, debug = False):
+    if debug: print("getDrinkOption1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+    
+def getDrinkOption2(prompt, debug = False):
+    if debug: print("getDrinkOption2 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
 
 def getMoney(prompt, debug = False):
     if debug: print("getMoney Function")
