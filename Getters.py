@@ -121,7 +121,8 @@ def getfastFood(prompt, debug = False):
                 "burger king", 
                 "dunkin donuts", 
                 "wendys", 
-                "five guy's",]
+                "five guy's",
+                "kfc"]
     
     while not goodInput:
         word = input(prompt)
