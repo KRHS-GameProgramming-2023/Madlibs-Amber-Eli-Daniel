@@ -9,9 +9,9 @@ def Story1(debug = False):
     food1 = getFood("Enter a food: ", debug)
     adjective1 = getAdjective("Enter an adjective: ", debug)
     friendName2 = getWord("Enter a name: ", debug)
-    cardGame1 = getGame("Enter a card game: ", debug)
+    cardGame1 = getCardGame("Enter a card game: ", debug)
     noun1 = getNoun("Enter a noun: ", debug)
-    verb1 = getPastVerb("Enter a past tense verb: ", debug)
+    verb1 = getPastVerb("Enter a movement verb: ", debug)
 
     out = "\n"
     out += "One day me and my friend " + friendName1

@@ -172,7 +172,7 @@ def getAdjective(prompt, debug = False):
         
     return word
 
-def getGame(prompt, debug = False):
+def getCardGame(prompt, debug = False):
     if debug: print("getGame Function")
     
     goodInput = False
@@ -255,21 +255,6 @@ def getPastVerb(prompt, debug = False):
         
     return word
     
-def getName1(prompt, debug = False):
-    if debug: print("getName1 Function")
-    
-    goodInput = False
-    
-    while not goodInput:
-        word = input(prompt)
-        goodInput = True
-        if isSwear(word, debug):
-            goodInput = False
-            print("Don't use language like that")
-            
-        
-    return word
-    
 def getFoodOption1(prompt, debug = False):
     if debug: print("getFoodOption1 Function")
     
@@ -284,7 +269,7 @@ def getFoodOption1(prompt, debug = False):
             
         
     return word
-
+    
 def getFoodOption2(prompt, debug = False):
     if debug: print("getFoodOption2 Function")
     
@@ -299,7 +284,7 @@ def getFoodOption2(prompt, debug = False):
             
         
     return word
-    
+
 def getDrinkOption1(prompt, debug = False):
     if debug: print("getDrinkOption1 Function")
     
@@ -362,8 +347,6 @@ def getMoney(prompt, debug = False):
         
     return word
 
-#Getters for story 4 
-
 def getRestaurant(prompt, debug = False):
     if debug: print("getRestaurant Function")
     
@@ -392,22 +375,7 @@ def getCreature(prompt, debug = False):
         
     return word
 
-def getName2(prompt, debug = False):
-    if debug: print("getName2 Function")
-    
-    goodInput = False
-    
-    while not goodInput:
-        word = input(prompt)
-        goodInput = True
-        if isSwear(word, debug):
-            goodInput = False
-            print("Don't use language like that")
-            
-        
-    return word
-
-def getGame1(prompt, debug = False):
+def getGame(prompt, debug = False):
     if debug: print("getGame1 Function")
     
     goodInput = False
@@ -421,34 +389,7 @@ def getGame1(prompt, debug = False):
         
     return word
 
-def getGame2(prompt, debug = False):
-    if debug: print("getGame2 Function")
-    
-    goodInput = False
-    
-    while not goodInput:
-        word = input(prompt)
-        goodInput = True
-        if isSwear(word, debug):
-            goodInput = False
-            print("Don't use language like that")
-        
-    return word
 
-def getMovmentVerb(prompt, debug = False):
-    if debug: print("getMovementVerb Function")
-    
-    goodInput = False
-    
-    while not goodInput:
-        word = input(prompt)
-        goodInput = True
-        if isSwear(word, debug):
-            goodInput = False
-            print("Don't use language like that")
-        
-    return word
-    
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
     f = open("swearList.txt", 'r')

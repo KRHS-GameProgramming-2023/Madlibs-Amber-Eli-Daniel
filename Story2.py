@@ -4,15 +4,15 @@ def Story2(debug = False):
     if debug : print("Story2 Function")
 
     print("")
-    friendName1 = getWord("enter a name ", debug)
-    sport1 = getSport("enter a sport ", debug)
-    food1 = getfastFood("enter a fast food restaurant ", debug)
-    name1 = getName1("enter a name ", debug)
-    money1 = getMoney("enter a amount of money ", debug)
-    foodOption1 = getFoodOption1("enter a meal ")
-    foodOption2 = getFoodOption2("enter a meal ")
-    drinkOption1 = getDrinkOption1("enter a drink ")
-    drinkOption2 = getDrinkOption2("enter a drink ")
+    friendName1 = getWord("Enter a name: ", debug)
+    sport1 = getSport("Enter a sport: ", debug)
+    food1 = getfastFood("Enter a fast food restaurant: ", debug)
+    name1 = getName1("Enter a name: ", debug)
+    money1 = getMoney("Enter a amount of money: ", debug)
+    foodOption1 = getFoodOption1("Enter a meal: ")
+    foodOption2 = getFoodOption2("Enter a meal: ")
+    drinkOption1 = getDrinkOption1("Enter a drink: ")
+    drinkOption2 = getDrinkOption2("Enter a drink: ")
     
     out = "\n"
     out+= "One day my friend, " +friendName1
