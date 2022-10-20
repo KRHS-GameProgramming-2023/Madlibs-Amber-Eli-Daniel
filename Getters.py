@@ -363,8 +363,8 @@ def getMoney(prompt, debug = False):
 
 #Getters for story 4 
 
-def getWord(prompt, debug = False):
-    if debug: print("getWord Function")
+def getRestaurant(prompt, debug = False):
+    if debug: print("getRestaurant Function")
     
     goodInput = False
     
@@ -377,8 +377,8 @@ def getWord(prompt, debug = False):
         
     return word
     
-def getWord(prompt, debug = False):
-    if debug: print("getWord Function")
+def getCreature(prompt, debug = False):
+    if debug: print("getCreature Function")
     
     goodInput = False
     
@@ -390,9 +390,63 @@ def getWord(prompt, debug = False):
             print("Don't use language like that")
         
     return word
+
+def getName2(prompt, debug = False):
+    if debug: print("getName2 Function")
     
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
 
+def getGame1(prompt, debug = False):
+    if debug: print("getGame1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
 
+def getGame2(prompt, debug = False):
+    if debug: print("getGame2 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+
+def getMovmentVerb(prompt, debug = False):
+    if debug: print("getMovementVerb Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
     
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
