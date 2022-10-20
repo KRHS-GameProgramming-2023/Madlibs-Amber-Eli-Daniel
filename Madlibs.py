@@ -9,7 +9,7 @@ def Madlibs(debug = False):
     if debug: print("welcome to debug")
     
     print(TitleScreen(debug))
-    input("Press enter to continue")
+    input("Press enter to continue ")
     
     done = False
     
