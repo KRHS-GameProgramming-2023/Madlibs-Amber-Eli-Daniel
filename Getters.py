@@ -360,6 +360,39 @@ def getMoney(prompt, debug = False):
             
         
     return word
+
+#Getters for story 4 
+
+def getWord(prompt, debug = False):
+    if debug: print("getWord Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+    
+def getWord(prompt, debug = False):
+    if debug: print("getWord Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+    
+
+
     
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
