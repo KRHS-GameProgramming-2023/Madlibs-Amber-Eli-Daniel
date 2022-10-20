@@ -40,6 +40,6 @@ def Story4(debug = False):
     out += " to counteract \n"
     out += " this, they decided to go play " + sport1
     out += " they ended up playing till the end of eternity."
-    out += "\n \n The End"
-    
+    out += "\n \n The End \n"
+     
     return out
