@@ -25,6 +25,6 @@ def Story4(debug = False):
     out += " they all got so full that everyone became extremely " + adjective1
     out += " to counteract this, they decided to go play " + sport1
     out += " they ended up playing till the end of eternity."
-    out += "\n \n The End"
+    out += "\n \n The End \n"
     
     return out
