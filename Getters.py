@@ -49,7 +49,6 @@ def getMenuOption(debug = False):
         
     return option
 
-
 def getWord(prompt, debug = False):
     if debug: print("getWord Function")
     
@@ -105,6 +104,10 @@ def getSport(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(sports))
         elif word.lower() not in sports:
             goodInput = False
             print("Sorry I don't know that one.")
@@ -130,6 +133,10 @@ def getfastFood(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(fastFood))
         elif word.lower() not in fastFood:
             goodInput = False
             print("please use a real fast food place")
@@ -202,6 +209,10 @@ def getCardGame(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(games))
         elif word.lower() not in games:
             goodInput = False
             print("Sorry I don't know that one.")
@@ -241,7 +252,8 @@ def getPastVerb(prompt, debug = False):
              "sprinted",
              "jogged",
              "flew",
-             "crawled"]
+             "crawled",
+             "bounced"]
     
     while not goodInput:
         word = input(prompt)
@@ -249,6 +261,10 @@ def getPastVerb(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(verbs))
         elif word.lower() not in verbs:
             goodInput = False
             print("Sorry I don't know that one.")
@@ -319,7 +335,16 @@ def getMoney(prompt, debug = False):
     if debug: print("getMoney Function")
     
     goodInput = False
-    nums = "0123456789."
+    nums = ["0", 
+            "1", 
+            "2", 
+            "3", 
+            "4", 
+            "5", 
+            "6", 
+            "7", 
+            "8", 
+            "9"]
     
     while not goodInput:
         word = input(prompt)
