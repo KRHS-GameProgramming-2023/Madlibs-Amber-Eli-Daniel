@@ -34,12 +34,20 @@ def getMenuOption(debug = False):
             option == "story3"):
                 option = "3"
                 goodInput = True
+        elif (option == "4" or 
+            option == "four" or
+            option == "story 4" or 
+            option == "story4"):
+                option = "4"
+                goodInput = True
+        elif (option == "spike" or "quack"):
+            option = "easter"
+            goodInput = True
                 
         else:
             print("Please make a valid choice")
         
     return option
-
 
 def getWord(prompt, debug = False):
     if debug: print("getWord Function")
@@ -96,6 +104,10 @@ def getSport(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(sports))
         elif word.lower() not in sports:
             goodInput = False
             print("Sorry I don't know that one.")
@@ -112,7 +124,8 @@ def getfastFood(prompt, debug = False):
                 "burger king", 
                 "dunkin donuts", 
                 "wendys", 
-                "five guy's",]
+                "five guy's",
+                "kfc"]
     
     while not goodInput:
         word = input(prompt)
@@ -120,6 +133,10 @@ def getfastFood(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(fastFood))
         elif word.lower() not in fastFood:
             goodInput = False
             print("please use a real fast food place")
@@ -162,7 +179,7 @@ def getAdjective(prompt, debug = False):
         
     return word
 
-def getGame(prompt, debug = False):
+def getCardGame(prompt, debug = False):
     if debug: print("getGame Function")
     
     goodInput = False
@@ -192,6 +209,10 @@ def getGame(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(games))
         elif word.lower() not in games:
             goodInput = False
             print("Sorry I don't know that one.")
@@ -214,7 +235,7 @@ def getNoun(prompt, debug = False):
         
     return word
 
-def getVerb(prompt, debug = False):
+def getPastVerb(prompt, debug = False):
     if debug: print("getVerb Function")
     
     goodInput = False
@@ -231,7 +252,8 @@ def getVerb(prompt, debug = False):
              "sprinted",
              "jogged",
              "flew",
-             "crawled"]
+             "crawled",
+             "bounced"]
     
     while not goodInput:
         word = input(prompt)
@@ -239,14 +261,63 @@ def getVerb(prompt, debug = False):
         if isSwear(word, debug):
             goodInput = False
             print("Don't use language like that")
+        elif (word == "?" or
+              word.lower() == "help"):
+            goodInput = False
+            print("These are the word options: " + str(verbs))
         elif word.lower() not in verbs:
             goodInput = False
             print("Sorry I don't know that one.")
         
     return word
     
-def getName1(prompt, debug = False):
-    if debug: print("getName1 Function")
+def getFoodOption1(prompt, debug = False):
+    if debug: print("getFoodOption1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+    
+def getFoodOption2(prompt, debug = False):
+    if debug: print("getFoodOption2 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+
+def getDrinkOption1(prompt, debug = False):
+    if debug: print("getDrinkOption1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+            
+        
+    return word
+    
+def getDrinkOption2(prompt, debug = False):
+    if debug: print("getDrinkOption2 Function")
     
     goodInput = False
     
@@ -264,7 +335,16 @@ def getMoney(prompt, debug = False):
     if debug: print("getMoney Function")
     
     goodInput = False
-    nums = "0123456789."
+    nums = ["0", 
+            "1", 
+            "2", 
+            "3", 
+            "4", 
+            "5", 
+            "6", 
+            "7", 
+            "8", 
+            "9"]
     
     while not goodInput:
         word = input(prompt)
@@ -291,7 +371,50 @@ def getMoney(prompt, debug = False):
             
         
     return word
+
+def getRestaurant(prompt, debug = False):
+    if debug: print("getRestaurant Function")
     
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+    
+def getCreature(prompt, debug = False):
+    if debug: print("getCreature Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+
+def getGame(prompt, debug = False):
+    if debug: print("getGame1 Function")
+    
+    goodInput = False
+    
+    while not goodInput:
+        word = input(prompt)
+        goodInput = True
+        if isSwear(word, debug):
+            goodInput = False
+            print("Don't use language like that")
+        
+    return word
+
+
 def isSwear(word, debug = False):
     if debug: print("isSwear Function")
     f = open("swearList.txt", 'r')
