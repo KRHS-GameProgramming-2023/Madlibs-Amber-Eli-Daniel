@@ -10,6 +10,7 @@ def Story3(debug = False):
     weapon3 = getWeapon("Enter a Weapon: ", debug)
     actionVerb3 = getWord("Enter an action verb: ", debug)
     bigNumber3 = getWord("Enter a big number: ", debug)
+    loud1 = getWord("Enter an asertive remark: ", debug)
 
     out = "\n"
     out += "    One day me and my friend " + friendName3
@@ -24,7 +25,9 @@ def Story3(debug = False):
     out += " hit with over " + bigNumber3
     out += " joules of energy! "
     out += "\n we never saw those " + thing3
-    out += " again " 
+    out += " again! " + friendName3 
+    out += " screamed " + loud1
+    out += "\n out of excitement!"
     
     
     return out
